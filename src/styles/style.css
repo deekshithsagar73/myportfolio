@@ -1,0 +1,102 @@
+/* Option 3: Modern Gradient Design */
+
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%); /* Warm gradient background */
+  color: #ffffff; /* White text */
+}
+
+/* Heading Styling */
+h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Paragraph Styling */
+p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Navbar Styling */
+.navbar {
+  background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); /* Cool gradient background */
+  padding: 1rem;
+  color: #ffffff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar Links */
+.navbar a {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 1.5rem;
+}
+
+.navbar a:hover {
+  transform: scale(1.2);
+  border-bottom: 2px solid #ffffff;
+}
+
+/* Button Styling */
+.btn-primary {
+  background: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%); /* Gradient button */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(120deg, #d57eeb 0%, #fccb90 100%);
+}
+
+/* Section Styling */
+section {
+  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%); /* Match body background */
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Link Styling */
+a {
+  color: #ffffff;
+  transition: transform 0.2s ease;
+}
+
+a:hover {
+  transform: scale(1.2);
+}
+
+/* Media Query for Mobile Responsiveness */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .btn-primary {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+}

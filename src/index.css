@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #0d0d0d, #1a1a1a); /* Very dark gradient */
+  color: #e0e0e0; /* Light gray for text */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: rgba(13, 13, 13, 0.9); /* Dark, almost black, with slight transparency */
+  color: #e0e0e0;
+  backdrop-filter: blur(5px);
+  border-bottom: 2px solid #00bcd4; /* Cyan border */
+}
+
+.navbar a {
+  color: #e0e0e0;
+}
+
+.navbar a:hover {
+  color: #00bcd4; /* Cyan for hover effect */
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: #00bcd4; /* Cyan button */
+  color: #0d0d0d;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: #008c9e; /* Darker cyan on hover */
+}
+
+/* Hero Text Styles */
+.heroHeadText {
+  font-size: 3.5rem;
+  color: #ffffff;
+}
+
+.heroSubText {
+  font-size: 1.5rem;
+  color: #80deea; /* Light cyan for subtitle */
+}
+
+/* General Link Styles */
+a {
+  color: #e0e0e0;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  color: #00bcd4;
+  transform: scale(1.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section Styling */
+.section {
+  padding: 50px 0;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Remove gaps for sections */
+#projects,
+#experience {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Vertical Timeline Styling */
+.vertical-timeline-element-content {
+  background: linear-gradient(90deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.vertical-timeline-element-icon {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
