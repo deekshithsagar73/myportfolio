@@ -36,7 +36,7 @@
 // export default About;
 import React from 'react';
 import { motion } from 'framer-motion';
-import ServiceCard from './Servicecard';
+import ServiceCard from './ServiceCard';
 import { services } from '../constants';
 import SkillsScroller from './SkillsScroller';
 
