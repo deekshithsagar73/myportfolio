@@ -2,11 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { navLinks } from '../constants';
 import '../index.css';
-import menu from '../assets/menu.svg';
-import close from '../assets/close.svg';
-import icon1 from '../assets/icon-linkd.png';
-import icon2 from '../assets/icon-gmail.png';
-import icon3 from '../assets/icon-git.png';
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -19,14 +14,13 @@ const Navbar = () => {
         {/* Icons with links (Move slightly to the right) */}
         <div className="flex items-center gap-4 ml-8"> {/* Adjust the margin here */}
           <a href="https://www.linkedin.com/in/deekshithsagar/" target="_blank" rel="noopener noreferrer">
-            <img src={icon1} alt="LinkedIn" className="w-8 h-8 object-contain hover:scale-110 transition-transform duration-300" />
+            <img src="assets/icon-linkd.png" alt="LinkedIn" className="w-8 h-8 object-contain hover:scale-110 transition-transform duration-300" />
           </a>
           <a href="mailto:deekshithsagar73@gmail.com" target="_blank" rel="noopener noreferrer">
-  <img src={icon2} alt="Gmail" className="w-8 h-8 object-contain hover:scale-110 transition-transform duration-300" />
-</a>
-
+            <img src="assets/icon-gmail.png" alt="Gmail" className="w-8 h-8 object-contain hover:scale-110 transition-transform duration-300" />
+          </a>
           <a href="https://github.com/deekshithsagar73" target="_blank" rel="noopener noreferrer">
-            <img src={icon3} alt="GitHub" className="w-8 h-8 object-contain hover:scale-110 transition-transform duration-300" />
+            <img src="assets/icon-git.png" alt="GitHub" className="w-8 h-8 object-contain hover:scale-110 transition-transform duration-300" />
           </a>
         </div>
 
@@ -53,7 +47,7 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div className='sm:hidden flex flex-1 justify-end items-center'>
           <img
-            src={toggle ? close : menu}
+            src={toggle ? "/close.svg" : "/menu.svg"}
             alt='menu'
             className='w-[28px] h-[28px] object-contain'
             onClick={() => setToggle(!toggle)}

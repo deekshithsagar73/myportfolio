@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaLinkedin, FaGithub, FaAngellist } from "react-icons/fa";
 import House from "../canvas/House";
-import resume from "../assets/ml_resume.pdf";
+import resume from "/assets/ml_resume.pdf";
 
 const Home = () => {
   return (

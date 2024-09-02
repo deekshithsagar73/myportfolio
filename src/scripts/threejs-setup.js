@@ -15,7 +15,7 @@ class Your3DModel {
     document.getElementById('model-canvas').appendChild(renderer.domElement);
 
     const loader = new GLTFLoader();
-    loader.load('/src/assets/robot_playground/scene.gltf', (gltf) => {
+    loader.load('/robot_playground/scene.gltf', (gltf) => {
       scene.add(gltf.scene);
       renderer.render(scene, camera);
     });
