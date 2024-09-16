@@ -46,6 +46,38 @@ export const skills = [
   "GraphQL", "Jest", "Redux", "Next.js", "Gatsby", "Figma", "PostgreSQL",
   "Firebase", "Java", "C++", "Kubernetes", "Azure", "Linux", "JIRA", "Agile"
 ];
+export const experiences = [
+  {
+    role: "Software Engineer Intern (Full Stack) - The Integrity Company",
+    duration: "May 2024 – Present, Ocean Side, California",
+    details: [
+      "Deployed automation solutions in Salesforce CRM, optimizing workflows and enhancing operational efficiency.",
+      "Implemented algorithms for pre-appointment tasks and automated post-job communication processes.",
+      "Designed and developed a database and a full-stack website to manage and place jobs for the portal."
+    ],
+    icon: '/assets/internship.png' // Replace with actual icon paths
+  },
+  {
+    role: "Research Assistant (AI Security Innovations) - University at Buffalo",
+    duration: "Feb 2024 – Apr 2024, Buffalo, New York",
+    details: [
+      "Pioneered the integration of Transformers to enhance ‘Sven’s’ ability to identify complex security vulnerabilities.",
+      "Utilized advanced LLMs to boost ‘Sven’s’ analytical capabilities, ensuring security in vulnerability assessments."
+    ],
+    icon: '/assets/research.png'
+  },
+  {
+    role: "Senior Lead Engineer / Software Engineer - NTT Data (Apisero Inc)",
+    duration: "Aug 2020 – Aug 2023, Hyderabad, India",
+    details: [
+      "Engineered a MuleSoft-Datadog connector for Indeed, boosting job portal efficiency by 50% and saving $300K annually.",
+      "Led the modernization of 30% of legacy APIs to Salesforce UI, enhancing system integrations and testing across platforms like Workday and AWS.",
+      "Orchestrated the deployment of CI/CD pipelines for AWS and Kubernetes, improving deployment processes.",
+      "Streamlined cloud-based integrations using MuleSoft, elevating Salesforce-MSSQL synchronization efficiency by 99% and saving $100K per year."
+    ],
+    icon: '/assets/lead-engineer.png'
+  }
+];
 
 export const fontProps = {
   font: "/helvetiker_regular.typeface.json",
@@ -60,7 +92,7 @@ export const projects = [
     tech: "PyTorch, ResNet, Ensemble Models",
     description: "Designed and continually enhanced a model to detect manipulated media, supporting integrity in digital content.",
     date: "Mar 2024",
-    image: "/images/deep_fake_detection.png",
+    image: "/assets/project1.png",
     live: "https://yourliveproject.com/deepfake",
     source: "https://github.com/yourusername/deepfake-detection",
     tags: [
@@ -74,7 +106,7 @@ export const projects = [
     tech: "Python, Autoencoders",
     description: "Automated defect detection in manufacturing, reducing manual inspection and improving error detection efficiency.",
     date: "Jan 2024",
-    image: "/images/autoencoder_anomaly_detection.png",
+    image: "/assets/project2.png",
     live: "https://yourliveproject.com/autoencoder",
     source: "https://github.com/yourusername/autoencoder-anomaly-detection",
     tags: [
@@ -87,7 +119,7 @@ export const projects = [
     tech: "Python, RNN, LSTM",
     description: "Developed models to predict energy usage patterns, aiding utility companies in resource and grid optimization.",
     date: "Nov 2023",
-    image: "/images/time_series_forecasting.png",
+    image: "/assets/project2.png",
     live: "https://yourliveproject.com/timeseries",
     source: "https://github.com/yourusername/time-series-forecasting",
     tags: [
@@ -101,7 +133,7 @@ export const projects = [
     tech: "Python, LSTM, NLP",
     description: "Analyzed customer sentiment from social media data, achieving over 90% accuracy to improve marketing strategies.",
     date: "Oct 2023",
-    image: "/images/sentiment_analysis.png",
+    image: "/assets/project2.png",
     live: "https://yourliveproject.com/sentiment-analysis",
     source: "https://github.com/yourusername/sentiment-analysis",
     tags: [
@@ -115,7 +147,7 @@ export const projects = [
     tech: "Python, OpenCV, YOLOv4",
     description: "Implemented real-time object detection to enhance automation in surveillance systems, achieving high accuracy.",
     date: "Sep 2023",
-    image: "/images/object_detection.png",
+    image: "/assets/project2.png",
     live: "https://yourliveproject.com/object-detection",
     source: "https://github.com/yourusername/object-detection",
     tags: [
@@ -129,7 +161,7 @@ export const projects = [
     tech: "React, Node.js, Express",
     description: "Built a dynamic web application that provides real-time weather updates using OpenWeather API.",
     date: "Aug 2023",
-    image: "/images/weather_forecasting.png",
+    image: "/assets/project2.png",
     live: "https://yourliveproject.com/weather-forecast",
     source: "https://github.com/yourusername/weather-forecast",
     tags: [
@@ -143,7 +175,7 @@ export const projects = [
     tech: "React, Node.js, MongoDB",
     description: "Developed a full-stack e-commerce platform with payment integration and user authentication.",
     date: "Jul 2023",
-    image: "/images/e_commerce_platform.png",
+    image: "/assets/project2.png",
     live: "https://yourliveproject.com/e-commerce",
     source: "https://github.com/yourusername/e-commerce-platform",
     tags: [
@@ -157,7 +189,7 @@ export const projects = [
     tech: "React, Socket.io, Node.js",
     description: "Created a real-time chat application with multiple room support and private messaging.",
     date: "Jun 2023",
-    image: "/images/chat_application.png",
+    image: "/assets/project2.png",
     live: "https://yourliveproject.com/chat",
     source: "https://github.com/yourusername/chat-application",
     tags: [
@@ -168,62 +200,3 @@ export const projects = [
   },
 ];
 
-
-
-// export const projects = [
-//   {
-//     name: "Deep Fake Detection System",
-//     tech: "PyTorch, ResNet, Ensemble Models",
-//     description: "Designed and continually enhanced a model to detect manipulated media, supporting integrity in digital content.",
-//     date: "Mar 2024",
-//     image: "/images/deep_fake_detection.png",  // Replace with your image path
-//     live: "https://yourliveproject.com/deepfake",  // Replace with your live project link
-//     source: "https://github.com/yourusername/deepfake-detection",  // Replace with your GitHub link
-//     tags: [
-//       { name: "PyTorch", color: "text-red-500" },
-//       { name: "ResNet", color: "text-blue-500" },
-//       { name: "AI", color: "text-green-500" },
-//     ],
-//   },
-//   {
-//     name: "Autoencoder for Anomaly Detection",
-//     tech: "Python, Autoencoders",
-//     description: "Automated defect detection in manufacturing, reducing manual inspection and improving error detection efficiency.",
-//     date: "Jan 2024",
-//     image: "/images/autoencoder_anomaly_detection.png",  // Replace with your image path
-//     live: "https://yourliveproject.com/autoencoder",  // Replace with your live project link
-//     source: "https://github.com/yourusername/autoencoder-anomaly-detection",  // Replace with your GitHub link
-//     tags: [
-//       { name: "Python", color: "text-yellow-500" },
-//       { name: "Autoencoders", color: "text-purple-500" },
-//     ],
-//   },
-//   {
-//     name: "Time-Series Forecasting with RNNs",
-//     tech: "Python, RNN, LSTM",
-//     description: "Developed models to predict energy usage patterns, aiding utility companies in resource and grid optimization.",
-//     date: "Nov 2023",
-//     image: "/images/time_series_forecasting.png",  // Replace with your image path
-//     live: "https://yourliveproject.com/timeseries",  // Replace with your live project link
-//     source: "https://github.com/yourusername/time-series-forecasting",  // Replace with your GitHub link
-//     tags: [
-//       { name: "Python", color: "text-yellow-500" },
-//       { name: "RNN", color: "text-red-500" },
-//       { name: "LSTM", color: "text-blue-500" },
-//     ],
-//   },
-//   {
-//     name: "Sentiment Analysis Using LSTM",
-//     tech: "Python, LSTM, NLP",
-//     description: "Analyzed customer sentiment from social media data, achieving over 90% accuracy to improve marketing strategies.",
-//     date: "Oct 2023",
-//     image: "/images/sentiment_analysis.png",  // Replace with your image path
-//     live: "https://yourliveproject.com/sentiment-analysis",  // Replace with your live project link
-//     source: "https://github.com/yourusername/sentiment-analysis",  // Replace with your GitHub link
-//     tags: [
-//       { name: "Python", color: "text-yellow-500" },
-//       { name: "LSTM", color: "text-blue-500" },
-//       { name: "NLP", color: "text-green-500" },
-//     ],
-//   },
-// ];

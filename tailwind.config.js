@@ -4,6 +4,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      height: {
+        'screen-75': '75vh',
+      },
       colors: {
         primary: '#1a73e8',
         secondary: '#1669bb',

@@ -1,80 +1,58 @@
-import React, { useRef, useState } from 'react';
-import ProjectCard from './ProjectCard';
-import { projects } from '../constants';
-import { motion } from "framer-motion";
-import { SectionWrapper } from "../hoc";
+import React, { useState } from 'react';
+import ProjectCard from './ProjectCard'; // Import the individual card component
+import { projects } from '../constants'; // Your project data
+import { motion } from 'framer-motion';
+import { textVariant } from '../utils/motion'; // Assuming you have a utility for text animations
 
 const Projects = () => {
-  const scrollRef = useRef(null);
-  const [centerIndex, setCenterIndex] = useState(Math.floor(projects.length / 2));
+  const [activeTag, setActiveTag] = useState('All'); // State for filtering projects
 
-  const scroll = (direction) => {
-    const { current } = scrollRef;
-    if (direction === "left") {
-      current.scrollLeft -= 300;
-      if (centerIndex > 0) {
-        setCenterIndex(centerIndex - 1);
-      }
-    } else {
-      current.scrollLeft += 300;
-      if (centerIndex < projects.length - 1) {
-        setCenterIndex(centerIndex + 1);
-      }
-    }
-  };
+  // Filtered projects based on selected tag
+  const filteredProjects = activeTag === 'All'
+    ? projects
+    : projects.filter((project) =>
+        project.tags.some((tag) => tag.name === activeTag)
+      );
 
   return (
-    <section id="projects" className="w-full h-auto bg-gradient-to-b from-gray-900 via-black to-gray-900 py-20">
-      <div className="max-w-full mx-auto px-0 relative">
-        <motion.div className="text-center mb-16">
-          <p className="text-cyan-500 text-lg">My work</p>
-          <h2 className="text-white text-4xl font-bold">Projects</h2>
+    <section 
+      className="w-full h-auto pt-28 py-20 bg-gradient-to-b from-gray-900 via-black to-gray-900 scroll-margin-top" // Adjusted top padding to push it down
+      id="projects"
+    >
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        {/* Section Heading */}
+        <motion.div variants={textVariant()} className="text-center mb-10">
+          <p className="text-lg font-semibold text-white">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
+              What I have built so far
+            </span>
+          </p>
+          <h2 className="text-white text-4xl font-bold mb-10">Projects Portfolio</h2>
         </motion.div>
 
-        <div className="relative flex items-center">
-          <button
-            className="absolute left-0 z-10 p-2 bg-gradient-to-r from-gray-800 via-gray-900 to-transparent text-white rounded-full shadow-md hover:bg-cyan-500"
-            onClick={() => scroll("left")}
-          >
-            &#8592;
-          </button>
+        {/* Filter by Tags */}
+        <div className="flex justify-center mb-10">
+          {['All', 'React', 'Python', 'AI', 'Fullstack'].map((tag) => (
+            <button
+              key={tag}
+              onClick={() => setActiveTag(tag)} // Set the active tag for filtering
+              className={`text-sm font-medium text-white px-4 py-2 rounded-lg m-1 transition-colors 
+                          ${activeTag === tag ? 'bg-blue-500' : 'bg-gray-800 hover:bg-blue-600'}`}
+            >
+              {tag}
+            </button>
+          ))}
+        </div>
 
-          <div
-            ref={scrollRef}
-            className="flex justify-center items-center gap-4 overflow-x-auto py-8 px-4 scroll-smooth scrollbar-hide"
-          >
-            {projects.map((project, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="flex-shrink-0"
-              >
-                <ProjectCard
-                  image={project.image}
-                  live={project.live}
-                  source={project.source}
-                  title={project.title}
-                  tags={project.tags}
-                  description={project.description}
-                  date={project.date}
-                  isCenter={index === centerIndex}
-                />
-              </motion.div>
-            ))}
-          </div>
-
-          <button
-            className="absolute right-0 z-10 p-2 bg-gradient-to-l from-gray-800 via-gray-900 to-transparent text-white rounded-full shadow-md hover:bg-cyan-500"
-            onClick={() => scroll("right")}
-          >
-            &#8594;
-          </button>
+        {/* Grid layout with 3 cards per row on larger screens */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProjects.map((project, index) => (
+            <ProjectCard key={project.title} project={project} index={index} />
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-export default SectionWrapper(Projects, "projects");
+export default Projects;

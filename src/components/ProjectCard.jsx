@@ -1,44 +1,66 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Tilt } from 'react-tilt'; // Optional tilt effect for hover
 
-const ProjectCard = ({ image, live, source, title, description, tags, date, isCenter }) => {
+const ProjectCard = ({ project }) => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const toggleFlip = () => {
+    setIsFlipped(!isFlipped);
+  };
+
   return (
-    <div
-      className={`w-72 sm:w-80 flex flex-col gap-4 p-5 rounded-2xl shadow-lg transform transition-transform duration-300 ${
-        isCenter ? 'scale-105' : 'scale-90 filter blur-sm'
-      } ${isCenter ? 'bg-gradient-to-r from-darker via-dark to-darkest' : 'bg-gray-800 opacity-70'}`}
+    <Tilt
+      options={{
+        max: 25,
+        scale: 1,
+        speed: 400,
+      }}
+      className="shadow-lg p-4 rounded-xl bg-gradient-to-r from-gray-800 via-gray-900 to-gray-700"  // Set card background and shadow
     >
-      <div className="w-full">
-        <img
-          src={image}
-          alt="project"
-          className="w-full h-48 object-cover rounded-lg shadow-md"
-        />
-      </div>
-      <div className="w-full flex flex-col justify-between">
-        <div>
-          <h2 className="text-xl font-bold mb-3">{title}</h2>
-          <div className="flex flex-wrap gap-2 mb-3">
-            {tags.map((tag, index) => (
-              <span key={index} className={`text-sm ${tag.color} font-medium`}>
-                #{tag.name}
-              </span>
-            ))}
-          </div>
-          <p className="text-gray-300 mb-3">{description}</p>
-        </div>
-        <div className="flex justify-between items-center mt-4">
-          <div className="flex gap-2">
+      <motion.div className="relative w-full h-full min-h-[450px]">
+        <div className={`flip-card-inner ${isFlipped ? 'flip' : ''}`}>
+          {/* Front of the card */}
+          <div className="flip-card-front w-full h-full p-4 rounded-xl bg-gradient-to-r from-gray-800 via-gray-900 to-gray-700">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-64 object-cover rounded-lg mb-4"
+            />
+            <h3 className="text-xl font-bold text-white">{project.title}</h3>
+            <p className="text-gray-400 mt-2">
+              {project.description.slice(0, 70)}...
+            </p>
             <button
-              onClick={() => window.open(source, '_blank')}
-              className="bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold py-2 px-4 rounded-lg shadow-md hover:from-green-500 hover:to-blue-600 transition-colors duration-300"
+              onClick={toggleFlip}
+              className="mt-4 text-sm bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-lg shadow-md"
             >
-              View More Details
+              Show more
             </button>
           </div>
-          <p className="text-gray-400 text-sm">{date}</p>
+
+          {/* Back of the card */}
+          <div className="flip-card-back w-full h-full p-4 rounded-xl bg-gradient-to-r from-gray-800 via-gray-900 to-gray-700">
+            <h3 className="text-xl font-bold text-white">{project.title}</h3>
+            <p className="text-gray-400 mt-2">{project.description}</p>
+            <div className="mt-4 flex gap-4">
+              <button
+                onClick={() => window.open(project.source, '_blank')}
+                className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-lg shadow-md"
+              >
+                View Project
+              </button>
+              <button
+                onClick={toggleFlip}
+                className="text-blue-500 mt-4 text-sm"
+              >
+                Show less
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </Tilt>
   );
 };
 
