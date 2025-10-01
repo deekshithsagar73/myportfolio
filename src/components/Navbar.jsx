@@ -8,7 +8,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="w-full flex items-center py-5 fixed top-0 z-20 navbar shadow-md bg-gray-900 border-b-2 border-cyan-500">
+    <nav className="w-full flex items-center py-5 fixed top-0 z-50 navbar shadow-md bg-gray-900 border-b-2 border-cyan-500">
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         
         {/* Icons with links (Move slightly to the right) */}

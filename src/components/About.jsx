@@ -18,11 +18,52 @@ const About = () => {
           <h2 className="text-white text-4xl font-bold">Overview</h2>
         </motion.div>
 
-        <motion.p 
-          className="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto mb-16 text-justify"
-        >
-          Full Stack Software Engineer (SDE) with 4 years of experience, currently pursuing a Master’s in Computer Science at the University at Buffalo. I specialize in building scalable, user-centric applications and have deep expertise in AI/ML technologies, including working with LLMs. My technical skills span Python, Java, React, and AWS, with significant work in optimizing business processes and developing advanced AI-driven security solutions. I thrive in collaborative, global environments and am driven by a passion for solving complex challenges in technology.
-        </motion.p>
+        <motion.div className="max-w-4xl mx-auto mb-16">
+          <p className="text-gray-300 text-lg leading-relaxed mb-8 text-center">
+            I'm a passionate Full Stack Developer and AI/ML Engineer with 5+ years of industry experience, holding a Master's in Computer Science from the University at Buffalo. My journey spans from building enterprise-level applications to pioneering AI-driven security solutions.
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-8 text-gray-300 mb-8">
+            <div className="bg-gray-800/50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-white mb-4">Education</h3>
+              <p className="text-sm leading-relaxed mb-3">
+                <strong>M.S. Computer Science (AI/ML)</strong> - University at Buffalo (3.8/4.0 GPA)
+              </p>
+              <p className="text-sm leading-relaxed">
+                <strong>B.Tech Computer Science</strong> - JNTUH (8.68/10 GPA)
+              </p>
+            </div>
+            
+            <div className="bg-gray-800/50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-white mb-4">Certifications</h3>
+              <p className="text-sm leading-relaxed mb-2">
+                • Salesforce Certified Administrator, Developer & Architect
+              </p>
+              <p className="text-sm leading-relaxed">
+                • MuleSoft Developer II
+              </p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 text-gray-300">
+            <div className="bg-gray-800/50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-white mb-4">Research & Publications</h3>
+              <p className="text-sm leading-relaxed">
+                Published IEEE paper on "GraphCodeBERT-Augmented Graph Attention Networks for Code Vulnerability Detection" at IEEE CAI 2025. 
+                Developed LLM for vulnerability analysis with 30% accuracy improvement.
+              </p>
+            </div>
+            
+            <div className="bg-gray-800/50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-white mb-4">Industry Impact</h3>
+              <p className="text-sm leading-relaxed">
+                I've delivered solutions that saved companies over $400K annually through automation and optimization. 
+                My work includes building MuleSoft integrations, developing AI security tools, and creating full-stack applications 
+                that serve thousands of users.
+              </p>
+            </div>
+          </div>
+        </motion.div>
 
         <div className="flex flex-wrap justify-center gap-10 mb-12">
           {services.map((service, index) => (

@@ -25,3 +25,14 @@ dist-ssr
 
 .zip
 *.zip
+
+# Project folders (to be committed separately)
+projects/
+deepfake-detection/
+anomaly-detection/
+energy-forecasting/
+sentiment-analysis/
+object-detection/
+weather-platform/
+ecommerce-platform/
+chat-platform/

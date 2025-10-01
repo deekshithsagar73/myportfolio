@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaLinkedin, FaGithub, FaAngellist } from "react-icons/fa";
 import House from "../canvas/House";
-import resume from "/assets/ml_resume.pdf";
+import resume from "/assets/deekshith_sagar_cv.pdf";
 
 const Home = () => {
   return (
@@ -14,7 +14,11 @@ const Home = () => {
           <div className="h-1 w-20 bg-gradient-to-r from-green-400 to-blue-500 my-3"></div>
 
           <p className="heroSubText text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 transition-transform duration-300 hover:transform hover:translate-y-[-5px] hover:scale-105">
-            Fullstack/AI-ML Engineer with 4 years of industry experience.
+            Fullstack Developer & AI/ML Engineer with 5+ years of industry experience.
+          </p>
+          <p className="text-gray-300 text-lg mt-4 max-w-2xl">
+            Passionate about building intelligent solutions that bridge the gap between cutting-edge AI research and real-world applications. 
+            Specialized in full-stack development, machine learning, and cloud technologies.
           </p>
           <a
             href={resume}
