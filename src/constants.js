@@ -17,6 +17,10 @@ export const navLinks = [
     title: "Projects",
   },
   {
+    id: "publications",
+    title: "Publications",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
@@ -295,6 +299,36 @@ export const projects = [
       { name: "Python", color: "text-yellow-500" },
       { name: "NLP", color: "text-green-500" },
       { name: "ML", color: "text-purple-500" },
+    ],
+  },
+  {
+    title: "AI-Powered Analytics Platform",
+    tech: "React, FastAPI, AWS, TypeScript, Serverless",
+    description: "Built and launched an AI-powered analytics platform enabling real-time data exploration and decision-making. Delivered full-stack features 30% faster with React/Next.js and FastAPI. Increased deployment reliability by 40% through CI/CD automation and Dockerized workflows.",
+    date: "Sep 2025",
+    image: "/assets/project1.png",
+    live: "https://analytics-demo.xfact.com",
+    source: "https://github.com/deekshithsagar73",
+    tags: [
+      { name: "React", color: "text-blue-500" },
+      { name: "FastAPI", color: "text-green-500" },
+      { name: "AWS", color: "text-orange-500" },
+      { name: "TypeScript", color: "text-blue-400" },
+    ],
+  },
+  {
+    title: "CRM & Customer Portal Development",
+    tech: "React, Django, REST APIs, Salesforce Integration",
+    description: "Enhanced Salesforce CRM efficiency through RESTful API integration and customer portal development with React. Built automated testing suite achieving comprehensive code coverage using Jest and Mocha. Implemented AI-powered analytics features using Django.",
+    date: "July 2025",
+    image: "/assets/project2.png",
+    live: "https://integrity-company-portal.com",
+    source: "https://github.com/deekshithsagar73",
+    tags: [
+      { name: "React", color: "text-blue-500" },
+      { name: "Django", color: "text-green-500" },
+      { name: "Salesforce", color: "text-blue-400" },
+      { name: "REST APIs", color: "text-purple-500" },
     ],
   },
 ];

@@ -11,8 +11,8 @@ const Publications = () => {
       year: "2025",
       doi: "10.1109/CAI.2025.xxxxxxx",
       link: "https://ieeexplore.ieee.org/document/11050748",
-      abstract: "This paper presents a novel approach to code vulnerability detection using GraphCodeBERT-augmented Graph Attention Networks. The method improves detection accuracy by 30% through fine-tuned LLM analysis of enterprise repositories and optimized Code Property Graphs (CPGs) for over 1 million C/C++ functions.",
-      keywords: ["GraphCodeBERT", "Graph Attention Networks", "Code Vulnerability Detection", "LLM", "Code Property Graphs", "AI Security"]
+      abstract: "This paper presents a novel approach to code vulnerability detection using GraphCodeBERT-augmented Graph Attention Networks. The method improves detection accuracy by 30% through fine-tuned LLM analysis of enterprise repositories and optimized Code Property Graphs (CPGs) for over 1 million C/C++ functions. Published in IEEE Xplore and represents significant advancement in AI-driven security vulnerability assessment.",
+      keywords: ["GraphCodeBERT", "Graph Attention Networks", "Code Vulnerability Detection", "LLM", "Code Property Graphs", "AI Security", "IEEE Publication"]
     }
   ];
 

@@ -112,6 +112,13 @@ const Contact = () => {
             "Innovation distinguishes between a leader and a follower." - Steve Jobs
           </p>
           
+          {/* Contact Information */}
+          <div className="text-center mb-6">
+            <p className="text-white text-lg font-medium mb-2">Get in Touch</p>
+            <p className="text-gray-300 text-sm mb-1">deekshithsagar73@gmail.com</p>
+            <p className="text-gray-300 text-sm">(716)-907-5387</p>
+          </div>
+          
           {/* Social Links */}
           <div className="flex gap-4">
             <a 
