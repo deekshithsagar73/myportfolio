@@ -26,13 +26,71 @@ dist-ssr
 .zip
 *.zip
 
-# Project folders (to be committed separately)
+# AI/ML Project folders (to be committed separately)
 projects/
 deepfake-detection/
 anomaly-detection/
+agentic-research-assistant/
 energy-forecasting/
 sentiment-analysis/
 object-detection/
 weather-platform/
 ecommerce-platform/
 chat-platform/
+
+# Python specific
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# AI/ML specific
+*.pth
+*.pt
+*.bin
+*.safetensors
+models/checkpoints/
+models/pretrained/
+results/
+data/processed/
+data/raw/
+*.db
+*.sqlite
+*.sqlite3
+logs/
+*.log
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/

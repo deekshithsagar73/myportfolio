@@ -6,7 +6,7 @@ import resume from "/assets/deekshith_sagar_cv.pdf";
 const Home = () => {
   return (
     <section id="home" className="relative w-full h-screen mx-auto bg-gradient-to-b from-gray-900 via-black to-gray-900">
-      <div className="absolute inset-0 top-20 max-w-7xl mx-auto flex flex-row items-center justify-between px-6 z-10">
+      <div className="absolute inset-0 top-20 max-w-6xl mx-auto flex flex-row items-center justify-between px-8 z-10">
         <div className="flex flex-col justify-center items-start space-y-5">
           <h1 className="heroHeadText text-white transition-transform duration-300 hover:transform hover:translate-y-[-5px] hover:scale-105">
             Rangapuram Deekshith Sagar

@@ -12,6 +12,30 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Prevent horizontal overflow */
+  font-size: 16px; /* Base font size */
+  line-height: 1.6; /* Better line spacing */
+}
+
+/* Global scaling adjustments */
+* {
+  box-sizing: border-box;
+}
+
+/* Reduce overall scaling for better readability */
+html {
+  font-size: 14px; /* Reduce base font size */
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 15px; /* Slightly larger on tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px; /* Normal size on desktop */
+  }
 }
 
 /* Navbar Styles */
@@ -45,13 +69,39 @@ body {
 
 /* Hero Text Styles */
 .heroHeadText {
-  font-size: 3.5rem;
+  font-size: 2.5rem; /* Reduced from 3.5rem */
   color: #ffffff;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .heroHeadText {
+    font-size: 3rem; /* Slightly larger on tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroHeadText {
+    font-size: 3.5rem; /* Full size on desktop */
+  }
 }
 
 .heroSubText {
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* Reduced from 1.5rem */
   color: #80deea; /* Light cyan for subtitle */
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .heroSubText {
+    font-size: 1.3rem; /* Slightly larger on tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroSubText {
+    font-size: 1.5rem; /* Full size on desktop */
+  }
 }
 
 /* General Link Styles */
@@ -67,6 +117,68 @@ a:hover {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Global spacing improvements */
+.container {
+  max-width: 1200px; /* Limit container width */
+  margin: 0 auto;
+  padding: 0 1rem; /* Add padding */
+}
+
+/* Section spacing */
+section {
+  padding: 2rem 0; /* Reduced from default */
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 3rem 0; /* Slightly more padding on tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  section {
+    padding: 4rem 0; /* Full padding on desktop */
+  }
+}
+
+/* Reduce overall scaling */
+.text-4xl {
+  font-size: 1.875rem; /* 30px */
+}
+
+.text-5xl {
+  font-size: 2.25rem; /* 36px */
+}
+
+.text-6xl {
+  font-size: 2.5rem; /* 40px */
+}
+
+@media (min-width: 768px) {
+  .text-4xl {
+    font-size: 2.25rem; /* 36px */
+  }
+  .text-5xl {
+    font-size: 3rem; /* 48px */
+  }
+  .text-6xl {
+    font-size: 3.5rem; /* 56px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-4xl {
+    font-size: 2.5rem; /* 40px */
+  }
+  .text-5xl {
+    font-size: 3.5rem; /* 56px */
+  }
+  .text-6xl {
+    font-size: 4rem; /* 64px */
+  }
 }
 
 /* Hide scrollbar */

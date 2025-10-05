@@ -8,8 +8,9 @@ module.exports = {
         'screen-75': '75vh',
       },
       colors: {
-        primary: '#1a73e8',
-        secondary: '#1669bb',
+        primary: '#0d0d0d',
+        secondary: '#1a1a1a',
+        tertiary: '#1e1e1e',
         dark: '#0f2027',
         darker: '#203a43',
         darkest: '#2c5364',
